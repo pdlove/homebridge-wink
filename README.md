@@ -20,8 +20,6 @@ Configuration sample:
 			"name": "Wink",
 			"username": "your@email.com",
 			"password": "WINK_PASSWORD",
-			"client_id": "YOUR_WINK_API_CLIENT_ID",
-			"client_secret": "YOUR_WINK_API_CLIENT_SECRET",
 			"hide_groups": ["garage_door", "thermostat"],
 			"hide_ids": [],
 			"fan_ids": []
@@ -53,6 +51,8 @@ Fields:
 * "fan_ids": List of Wink IDs (for binary switches or lightbulbs) that will be added as fans to Homebridge.
 * "temperature_unit" : Identifies the display unit for thermostats. F or C. Defaults to F
 * "direct_access" : Attempt to establish access to the Wink hub. true/false. Defaults to true.
+
+_Note:_ `"client_id"` and `"client_secret"` are obtained from requesting API access from the [Wink Developer Portal](https://developer.wink.com). While it is supported to specify them manually, the keys issued by Wink do not support password `grant-type` and will fail authentication. 
 
 # Device Support
 
